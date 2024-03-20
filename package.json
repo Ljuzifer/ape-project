@@ -2,7 +2,7 @@
     "name": "ape-project",
     "version": "1.0.0",
     "private": true,
-    "homepage": "",
+    "homepage": "https://ljuzifer.github.io/ape-project/",
     "dependencies": {
         "@testing-library/jest-dom": "^5.17.0",
         "@testing-library/react": "^13.4.0",
