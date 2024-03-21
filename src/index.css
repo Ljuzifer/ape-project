@@ -1,18 +1,51 @@
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-        "Helvetica Neue", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+@import "~normalize.css";
+
+@font-face {
+    font-family: "Right Grotesk";
+    font-style: normal;
+    font-weight: 900;
+    src: url("./fonts/RightGrotesk/RightGrotesk-CompactBlack.eot");
+    src: local("Right Grotesk"),
+        url("./fonts/RightGrotesk/RightGrotesk-CompactBlack.woff2")
+            format("woff2"),
+        url("./fonts/RightGrotesk/RightGrotesk-CompactBlack.woff")
+            format("woff"),
+        url("./fonts/RightGrotesk/RightGrotesk-CompactBlack.ttf")
+            format("truetype");
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-        monospace;
+@font-face {
+    font-family: "Biro Script";
+    font-style: normal;
+    font-weight: 700;
+    src: url("./fonts/BiroScript/BiroScriptPlus-Bold.eot");
+    src: local("Biro Script Plus US Bold"),
+        url("./fonts/BiroScript/BiroScriptPlus-Bold.woff2") format("woff2"),
+        url("./fonts/BiroScript/BiroScriptPlus-Bold.woff") format("woff"),
+        url("./fonts/BiroScript/BiroScriptPlus-Bold.ttf") format("truetype");
 }
 
-ol,
-ul {
-    text-decoration: none;
+@font-face {
+    font-family: "Messina Sans Mono";
+    font-style: normal;
+    font-weight: 400;
+    src: url("./fonts/MessinaSans/MessinaSansMono-Regular.eot");
+    src: local("Messina Sans Mono Regular"),
+        url("./fonts/MessinaSans/MessinaSansMono-Regular.woff2") format("woff2"),
+        url("./fonts/MessinaSans/MessinaSansMono-SemiBold.woff") format("woff"),
+        url("./fonts/MessinaSans/MessinaSansMono-Regular.ttf")
+            format("truetype");
+}
+
+@font-face {
+    font-family: "Messina Sans Mono";
+    font-style: normal;
+    font-weight: 600;
+    src: url("./fonts/MessinaSans/MessinaSansMono-SemiBold.eot");
+    src: local("Messina Sans Mono SemiBold"),
+        url("./fonts/MessinaSans/MessinaSansMono-SemiBold.woff2")
+            format("woff2"),
+        url("./fonts/MessinaSans/MessinaSansMono-SemiBold.woff") format("woff"),
+        url("./fonts/MessinaSans/MessinaSansMono-SemiBold.ttf")
+            format("truetype");
 }

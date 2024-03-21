@@ -1,18 +1,13 @@
 import styled from "styled-components";
-// import heroImg from "../../../assets/images/apes/hero-img-desk-1x.png";
 import hero from "../../exports/hero";
-
-export const Herosection = styled.section`
-    padding: 54px 8px 0;
-    margin: 0 auto;
-`;
+import { root } from "../../stylesheets/root";
 
 export const HeroContainer = styled.div`
     position: relative;
     width: 100%;
     height: 542px;
     padding: 36px 64px 0;
-    background-color: #dc3b5a;
+    background-color: ${root.colors.mainPinkColor};
     border-radius: 12px;
 
     background-image: url(${hero.mobile1x});
@@ -34,8 +29,19 @@ export const HeroContainer = styled.div`
         width: 216px;
         height: 41px;
 
-        backdrop-filter: blur(12px);
-        background: rgba(30, 30, 30, 0.1);
+        font-family: ${root.fonts.grotesk};
+        font-weight: 900;
+        font-size: 16px;
+        line-height: 1.19;
+        color: ${root.colors.secondDarkColor};
+
+        backdrop-filter: ${root.colors.filter};
+        background-color: ${root.colors.buttonOpacityFirst};
+
+        &:hover,
+        &:focus {
+            color: ${root.colors.textLigth};
+        }
     }
 
     p {
@@ -45,10 +51,38 @@ export const HeroContainer = styled.div`
         bottom: 19px;
         left: 50%;
         transform: translateX(-50%);
+
+        font-family: ${root.fonts.messina};
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+        text-transform: uppercase;
+        text-align: center;
+        color: #1e1e1e;
     }
 
     h1,
     h2 {
         text-align: center;
+    }
+
+    h1 {
+        font-family: ${root.fonts.grotesk};
+        font-style: normal;
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1;
+        letter-spacing: 0.01em;
+        margin-bottom: 8px;
+        color: ${root.colors.secondDarkColor};
+    }
+
+    h2 {
+        font-family: ${root.fonts.biro};
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.69;
+        color: ${root.colors.secondDarkColor};
     }
 `;
