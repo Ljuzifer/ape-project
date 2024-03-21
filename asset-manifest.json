@@ -1,15 +1,28 @@
 {
   "files": {
-    "main.css": "/ape-project/static/css/main.e6c13ad2.css",
-    "main.js": "/ape-project/static/js/main.003cad6d.js",
+    "main.css": "/ape-project/static/css/main.58462fbc.css",
+    "main.js": "/ape-project/static/js/main.95a1e7d4.js",
     "static/js/453.3902a25e.chunk.js": "/ape-project/static/js/453.3902a25e.chunk.js",
+    "static/media/about-img-desk-2x.png": "/ape-project/static/media/about-img-desk-2x.6d37a541f6247a19c6f8.png",
+    "static/media/hero-img-desk-2x.png": "/ape-project/static/media/hero-img-desk-2x.bfea4589746763ba4913.png",
+    "static/media/about-img-mob-2x.png": "/ape-project/static/media/about-img-mob-2x.4eca64c89e8f5c5fd329.png",
+    "static/media/about-img-tab-2x.png": "/ape-project/static/media/about-img-tab-2x.4eca64c89e8f5c5fd329.png",
+    "static/media/hero-img-tab-2x.png": "/ape-project/static/media/hero-img-tab-2x.6c395b498e58319108ae.png",
+    "static/media/about-img-desk-1x.png": "/ape-project/static/media/about-img-desk-1x.e1ce410de8c8daf894ae.png",
+    "static/media/hero-img-desk-1x.png": "/ape-project/static/media/hero-img-desk-1x.4cb001318e5e4708c2ac.png",
+    "static/media/hero-img-mob-2x.png": "/ape-project/static/media/hero-img-mob-2x.84d50bbf4b02a1d0983b.png",
+    "static/media/about-img-mob-1x.png": "/ape-project/static/media/about-img-mob-1x.3d822abf6a285d73be26.png",
+    "static/media/about-img-tab-1x.png": "/ape-project/static/media/about-img-tab-1x.3d822abf6a285d73be26.png",
+    "static/media/hero-img-tab-1x.png": "/ape-project/static/media/hero-img-tab-1x.c8fcaacf26aad5de33ea.png",
+    "static/media/hero-img-mob-1x.png": "/ape-project/static/media/hero-img-mob-1x.1227a5aad4b6d47ea4d4.png",
     "index.html": "/ape-project/index.html",
-    "main.e6c13ad2.css.map": "/ape-project/static/css/main.e6c13ad2.css.map",
-    "main.003cad6d.js.map": "/ape-project/static/js/main.003cad6d.js.map",
+    "static/media/cross.svg": "/ape-project/static/media/cross.1b442fa97209d2356d9a484f4bdb3190.svg",
+    "main.58462fbc.css.map": "/ape-project/static/css/main.58462fbc.css.map",
+    "main.95a1e7d4.js.map": "/ape-project/static/js/main.95a1e7d4.js.map",
     "453.3902a25e.chunk.js.map": "/ape-project/static/js/453.3902a25e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.003cad6d.js"
+    "static/css/main.58462fbc.css",
+    "static/js/main.95a1e7d4.js"
   ]
 }
