@@ -81,10 +81,10 @@ a {
 }
 
 
-// FONTS
+// FONTS ONLINE
 
 /* @font-face {
-    font-family: "Right Grotesk Compact Black";
+    font-family: "Right Grotesk";
     font-style: normal;
     font-weight: 900;
     src: url("https://db.onlinewebfonts.com/t/b22e7f36ecc1dd3baa7403f58a178ca6.eot");
@@ -96,7 +96,7 @@ a {
 }
 
 @font-face {
-    font-family: "Biro Script Plus Bold";
+    font-family: "Biro Script";
     src: url("https://db.onlinewebfonts.com/t/db773647ead7935ead46aeeb03917a6a.eot");
     src: url("https://db.onlinewebfonts.com/t/db773647ead7935ead46aeeb03917a6a.eot?#iefix")format("embedded-opentype"),
     url("https://db.onlinewebfonts.com/t/db773647ead7935ead46aeeb03917a6a.woff2")format("woff2"),
@@ -106,7 +106,7 @@ a {
 }
 
 @font-face {
-    font-family: "MessinaSansMonoWeb Regular";
+    font-family: "Messina Sans Mono";
     src: url("https://db.onlinewebfonts.com/t/bbb0e26c14f79333dad33f3ed785580c.eot");
     src: url("https://db.onlinewebfonts.com/t/bbb0e26c14f79333dad33f3ed785580c.eot?#iefix")format("embedded-opentype"),
     url("https://db.onlinewebfonts.com/t/bbb0e26c14f79333dad33f3ed785580c.woff2")format("woff2"),
@@ -122,4 +122,14 @@ export const Section = styled.section`
 
     min-width: ${root.breakpoints.minMobile};
     max-width: ${root.breakpoints.maxMobile};
+
+    @media (min-width: ${root.breakpoints.tablet}) {
+        padding: 0 16px;
+        max-width: ${root.breakpoints.tablet};
+    }
+
+    @media (min-width: ${root.breakpoints.minDesktop}) {
+        min-width: ${root.breakpoints.minDesktop};
+        max-width: ${root.breakpoints.maxDesktop};
+    }
 `;
