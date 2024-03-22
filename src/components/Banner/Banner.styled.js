@@ -10,7 +10,7 @@ export const BannerThumb = styled.div`
     height: 52px;
     padding: 6px 0;
     background: #dc3b5a;
-    overflow-y: hidden;
+    overflow: hidden;
 `;
 
 export const ThumbContent = styled.div`

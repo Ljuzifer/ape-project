@@ -1,4 +1,4 @@
-import "normalize.css";
+// import "normalize.css";
 import styled, { createGlobalStyle } from "styled-components";
 import { root } from "./stylesheets/root";
 
@@ -117,19 +117,19 @@ a {
 `;
 
 export const Section = styled.section`
-    padding: 0 8px;
+    /* padding: 0 8px; */
     margin: 0 auto;
 
     min-width: ${root.breakpoints.minMobile};
     max-width: ${root.breakpoints.maxMobile};
 
     @media (min-width: ${root.breakpoints.tablet}) {
-        padding: 0 16px;
+        /* padding: 0 16px; */
         max-width: ${root.breakpoints.tablet};
     }
 
     @media (min-width: ${root.breakpoints.desktop}) {
-        min-width: ${root.breakpoints.desktop};
-        /* max-width: ${root.breakpoints.maxDesktop}; */
+        /* min-width: ${root.breakpoints.desktop}; */
+        max-width: ${root.breakpoints.maxDesktop};
     }
 `;

@@ -3,6 +3,8 @@ import { root } from "../../stylesheets/root";
 
 export const MapContainer = styled.div`
     margin: 0 auto;
+    width: 216px;
+    /* height: 242px; */
     padding: ${root.container.paddingMob};
 
     h2 {
@@ -14,5 +16,24 @@ export const MapContainer = styled.div`
         text-transform: uppercase;
         text-align: center;
         color: ${root.colors.textLigth};
+    }
+
+    @media (min-width: ${root.breakpoints.tablet}) {
+        padding: ${root.container.paddingTab};
+        width: calc(592px + (16px * 2));
+
+        h2 {
+            font-size: 80px;
+            line-height: 1;
+        }
+    }
+
+    @media (min-width: ${root.breakpoints.desktop}) {
+        padding: ${root.container.paddingDesk};
+        width: calc(1032px + (16px * 2));
+
+        h2 {
+            font-size: 160px;
+        }
     }
 `;

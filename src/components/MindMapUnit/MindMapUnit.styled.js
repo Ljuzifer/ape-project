@@ -5,7 +5,7 @@ export const CardThumb = styled.div`
     position: relative;
 
     background-color: ${root.colors.secondDarkColor};
-    width: 100%;
+    width: 216px;
     height: 242px;
     border-radius: 12px;
 
@@ -22,7 +22,7 @@ export const CardThumb = styled.div`
         font-family: ${root.fonts.messina};
         font-weight: 400;
         font-size: 12px;
-        line-height: 1.16667;
+        line-height: 1.17;
         text-transform: uppercase;
         color: ${root.colors.textLigth};
     }

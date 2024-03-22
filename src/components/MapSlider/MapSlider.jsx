@@ -13,7 +13,7 @@ function MapSlider({ cards }) {
         dots: false,
         infinite: false,
         arrows: false,
-        speed: 500,
+        speed: 666,
         slidesToShow: 1,
         slidesToScroll: 1,
         initialSlide: 0,

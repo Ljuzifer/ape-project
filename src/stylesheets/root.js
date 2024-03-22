@@ -10,7 +10,7 @@ export const root = {
         maxMobile: "480px",
         tablet: "768px",
         desktop: "1280px",
-        // maxDesktop: "1440px",
+        maxDesktop: "1440px",
     },
 
     colors: {
@@ -34,8 +34,8 @@ export const root = {
     },
 
     container: {
-        paddingMob: "60px 64px 0",
-        paddingTab: "80px 74px 0",
-        paddingDesk: "120px 188px 0",
+        paddingMob: "60px 8px 0",
+        paddingTab: "80px 16px 0",
+        paddingDesk: "120px 16px 0",
     },
 };
