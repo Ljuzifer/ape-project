@@ -55,4 +55,33 @@ export const CardThumb = styled.div`
         height: 24px;
         fill: ${root.colors.textLigth};
     }
+
+    @media (min-width: ${root.breakpoints.tablet}) {
+        width: 284px;
+
+        p {
+            width: 128px;
+            margin-left: auto;
+        }
+    }
+
+    @media (min-width: ${root.breakpoints.desktop}) {
+        width: 504px;
+        height: 480px;
+
+        p {
+            width: 228px;
+            font-size: 24px;
+            line-height: 1.20833;
+        }
+
+        h3 {
+            font-size: 64px;
+        }
+
+        svg {
+            width: 40px;
+            height: 40px;
+        }
+    }
 `;

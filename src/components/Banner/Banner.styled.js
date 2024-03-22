@@ -9,10 +9,7 @@ export const BannerThumb = styled.div`
     width: 100vw;
     height: 52px;
     padding: 6px 0;
-    /* min-width: ${root.breakpoints.minMobile}; */
-    /* max-width: ${root.breakpoints.maxMobile}; */
     background: #dc3b5a;
-    /* white-space: pre; */
     overflow-y: hidden;
 `;
 
@@ -25,8 +22,12 @@ export const ThumbContent = styled.div`
     animation: marquee 22s linear infinite;
 
     p {
-        color: white;
+        font-family: ${root.fonts.grotesk};
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 1;
         text-transform: uppercase;
+        color: ${root.colors.textLigth};
         margin-right: 24px;
     }
 
@@ -49,6 +50,6 @@ export const Icon = styled.div`
     svg {
         width: 36px;
         height: 36px;
-        fill: white;
+        fill: ${root.colors.textLigth};
     }
 `;

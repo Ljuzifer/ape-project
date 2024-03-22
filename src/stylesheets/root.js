@@ -9,8 +9,8 @@ export const root = {
         minMobile: "360px",
         maxMobile: "480px",
         tablet: "768px",
-        minDesktop: "1280px",
-        maxDesktop: "1440px",
+        desktop: "1280px",
+        // maxDesktop: "1440px",
     },
 
     colors: {

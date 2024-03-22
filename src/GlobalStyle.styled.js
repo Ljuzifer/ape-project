@@ -128,8 +128,8 @@ export const Section = styled.section`
         max-width: ${root.breakpoints.tablet};
     }
 
-    @media (min-width: ${root.breakpoints.minDesktop}) {
-        min-width: ${root.breakpoints.minDesktop};
-        max-width: ${root.breakpoints.maxDesktop};
+    @media (min-width: ${root.breakpoints.desktop}) {
+        min-width: ${root.breakpoints.desktop};
+        /* max-width: ${root.breakpoints.maxDesktop}; */
     }
 `;
