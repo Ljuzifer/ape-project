@@ -13,7 +13,7 @@ export const NumberThumb = styled.span`
     font-weight: 400;
     font-size: 12px;
     line-height: 1.67;
-    width: 26px;
+    width: 28px;
     margin-left: auto;
     color: ${root.colors.mainPinkColor};
 `;

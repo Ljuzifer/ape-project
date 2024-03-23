@@ -4,6 +4,7 @@ import Hero from "./components/Hero/Hero";
 import About from "./components/About/About";
 import MindMap from "./components/MindMap/MindMap";
 import FaqUnitsList from "./components/FaqUnitsList/FaqUnitsList";
+import Collection from "./components/Collection/Collection";
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
             <About />
             <MindMap />
             <FaqUnitsList />
+            <Collection />
 
             <GlobalStyle />
         </>
