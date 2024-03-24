@@ -3,25 +3,34 @@ import { root } from "../../stylesheets/root";
 
 export const BannerThumb = styled.div`
     position: absolute;
+    display: flex;
+    align-items: flex-end;
     left: 50%;
     transform: translateX(-50%);
     bottom: 0;
     width: 100vw;
     height: 52px;
-    padding: 6px 0;
-    background: #dc3b5a;
+    padding: 11px 0;
+    background: ${root.colors.mainPinkColor};
     overflow: hidden;
+
+    @media (min-width: ${root.breakpoints.desktop}) {
+        padding: 16px 0;
+        height: 86px;
+    }
 `;
 
 export const ThumbContent = styled.div`
     width: 100%;
+    height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
     white-space: nowrap;
     animation: marquee 22s linear infinite;
 
-    p {
+    b {
+        display: block;
         font-family: ${root.fonts.grotesk};
         font-weight: 900;
         font-size: 36px;
@@ -39,6 +48,13 @@ export const ThumbContent = styled.div`
             transform: translateX(100%);
         }
     }
+
+    @media (min-width: ${root.breakpoints.desktop}) {
+        b {
+            font-size: 64px;
+            margin-right: 36px;
+        }
+    }
 `;
 
 export const Icon = styled.div`
@@ -51,5 +67,9 @@ export const Icon = styled.div`
         width: 36px;
         height: 36px;
         fill: ${root.colors.textLigth};
+    }
+
+    @media (min-width: ${root.breakpoints.desktop}) {
+        margin-right: 36px;
     }
 `;

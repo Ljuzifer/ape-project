@@ -130,10 +130,10 @@ export const FormThumb = styled(Form)`
         color: ${root.colors.textLigth};
         text-transform: uppercase;
         text-align: center;
+        cursor: pointer;
 
         &:hover,
-        &:focus,
-        &:active {
+        &:focus {
             color: ${root.colors.secondDarkColor};
         }
     }

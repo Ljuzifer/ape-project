@@ -1,3 +1,4 @@
+import "normalize.css";
 import styled, { createGlobalStyle } from "styled-components";
 import { root } from "./stylesheets/root";
 

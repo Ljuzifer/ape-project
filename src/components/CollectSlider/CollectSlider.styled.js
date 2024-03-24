@@ -40,10 +40,10 @@ export const ButtonThumb = styled.div`
         font-size: 24px;
         line-height: 1;
         color: ${root.colors.textLigth};
+        cursor: pointer;
 
-        &:active,
-        &:hover,
-        &:focus {
+        /* &:focus, */
+        &:hover {
             color: ${root.colors.mainPinkColor};
         }
     }

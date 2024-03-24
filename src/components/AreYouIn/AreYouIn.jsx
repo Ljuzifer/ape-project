@@ -1,5 +1,6 @@
-import { ErrorMessage, Formik } from "formik";
 import React from "react";
+import PropTypes from "prop-types";
+import { ErrorMessage, Formik } from "formik";
 import { formSchema } from "../../schema/formSchema";
 import { ReactComponent as Discord } from "../../icons/discord.svg";
 import { ReactComponent as MetaMask } from "../../icons/metaMask.svg";
@@ -9,7 +10,7 @@ import { MintContainer, FormThumb, InputThumb } from "./AreYouIn.styled";
 import { root } from "../../stylesheets/root";
 import toast from "react-hot-toast";
 
-function AreYouIn() {
+function AreYouIn({ anchor }) {
     const onSendForm = (values, actions) => {
         const username = values.name.trim().substring(1);
         const wallet = values.wallet.trim();
@@ -37,7 +38,7 @@ function AreYouIn() {
 
     return (
         <>
-            <Section>
+            <Section id={anchor}>
                 <MintContainer>
                     <h2>are you in?</h2>
                     <Cross />
@@ -112,3 +113,7 @@ function AreYouIn() {
 }
 
 export default AreYouIn;
+
+AreYouIn.propTypes = {
+    anchor: PropTypes.string.isRequired,
+};

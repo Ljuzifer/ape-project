@@ -64,6 +64,12 @@ export const FaqContainer = styled.div`
     @media (min-width: ${root.breakpoints.tablet}) {
         padding: ${root.container.paddingTab};
 
+        h2 {
+            font-size: 80px;
+            line-height: 1;
+            margin-bottom: 48px;
+        }
+
         li {
             border-radius: 16px;
             width: 592px;
@@ -87,6 +93,11 @@ export const FaqContainer = styled.div`
 
     @media (min-width: ${root.breakpoints.desktop}) {
         padding: ${root.container.paddingDesk};
+
+        h2 {
+            font-size: 160px;
+            margin-bottom: 80px;
+        }
 
         li {
             border-radius: 24px;

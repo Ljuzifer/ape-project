@@ -10,7 +10,7 @@ function Hero() {
                 <h1>YACHT APES</h1>
                 <h2>Apes aRe eveRywhere</h2>
 
-                <a href='#' type='button'>
+                <a href='#mint' type='button'>
                     MEET APES
                 </a>
                 <p>

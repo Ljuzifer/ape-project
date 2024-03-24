@@ -25,6 +25,7 @@ export const MapContainer = styled.div`
         h2 {
             font-size: 80px;
             line-height: 1;
+            margin-bottom: 40px;
         }
     }
 
@@ -34,6 +35,7 @@ export const MapContainer = styled.div`
 
         h2 {
             font-size: 160px;
+            margin-bottom: 80px;
         }
     }
 `;

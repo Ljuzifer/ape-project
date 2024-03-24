@@ -13,12 +13,14 @@ import { Toaster } from "react-hot-toast";
 function App() {
     return (
         <>
-            <Hero />
-            <About />
-            <MindMap />
-            <FaqUnitsList />
-            <Collection />
-            <AreYouIn />
+            <main>
+                <Hero />
+                <About />
+                <MindMap />
+                <FaqUnitsList />
+                <Collection />
+                <AreYouIn anchor='mint' />
+            </main>
             <Footer />
 
             <GlobalStyle />

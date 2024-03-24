@@ -9,15 +9,15 @@ function Banner() {
                 <Icon>
                     <Cross />
                 </Icon>
-                <p>Destroy stereotypes </p>
+                <b>Destroy stereotypes </b>
                 <Icon>
                     <Cross />
                 </Icon>
-                <p>HAVE NO LIMITS</p>
+                <b>HAVE NO LIMITS</b>
                 <Icon>
                     <Cross />
                 </Icon>
-                <p>Break rules</p>
+                <b>Break rules</b>
                 <Icon>
                     <Cross />
                 </Icon>
