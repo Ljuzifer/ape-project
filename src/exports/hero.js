@@ -12,6 +12,8 @@ const hero = {
     tablet2x: heroTab_2x,
     desktop1x: heroDesk_1x,
     desktop2x: heroDesk_2x,
+
+    alt: "Hero Ape",
 };
 
 export default hero;

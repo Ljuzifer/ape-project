@@ -7,7 +7,13 @@ export const AboutContainer = styled.div`
     height: calc(873px + 52px);
     padding: ${root.container.paddingMob};
 
-    background-repeat: no-repeat;
+    img {
+        width: 216px;
+        height: 292px;
+        margin: 0 auto;
+    }
+
+    /* background-repeat: no-repeat;
     background-position: bottom 52px center;
     background-size: 216px 292px;
 
@@ -25,14 +31,23 @@ export const AboutContainer = styled.div`
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
         background-image: url(${about.aboutMob2x});
-    }
+    } */
 
     @media (min-width: ${root.breakpoints.tablet}) {
+        position: relative;
         width: calc(768px - 2 * (88px - 16px));
         height: calc(627px + 52px);
         padding: ${root.container.paddingTab};
 
-        background-repeat: no-repeat;
+        img {
+            position: absolute;
+            width: 313px;
+            height: 422px;
+            right: 16px;
+            bottom: 52px;
+        }
+
+        /* background-repeat: no-repeat;
         background-position: bottom 52px right 16px;
         background-size: 313px 422px;
 
@@ -50,7 +65,7 @@ export const AboutContainer = styled.div`
             (min-resolution: 192dpi),
             (min-resolution: 2dppx) {
             background-image: url(${about.aboutTab2x});
-        }
+        } */
     }
 
     @media (min-width: ${root.breakpoints.desktop}) {
@@ -58,7 +73,13 @@ export const AboutContainer = styled.div`
         height: calc(1004px + 86px);
         padding: ${root.container.paddingDesk};
 
-        background-repeat: no-repeat;
+        img {
+            width: 492px;
+            height: 662px;
+            bottom: 86px;
+        }
+
+        /* background-repeat: no-repeat;
         background-position: bottom 86px right 16px;
         background-size: 492px 662px;
 
@@ -76,7 +97,7 @@ export const AboutContainer = styled.div`
             (min-resolution: 192dpi),
             (min-resolution: 2dppx) {
             background-image: url(${about.aboutDesk2x});
-        }
+        } */
     }
 `;
 
@@ -166,7 +187,7 @@ export const SecondDiv = styled.div`
         text-transform: uppercase;
         text-align: center;
         color: ${root.colors.textLigth};
-        margin: 0 auto;
+        margin: 0 auto 40px;
     }
 
     @media (min-width: ${root.breakpoints.tablet}) {

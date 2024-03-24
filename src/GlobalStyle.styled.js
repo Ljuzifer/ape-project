@@ -38,6 +38,13 @@ body {
     font-family: 'Messina Sans Mono', 'Right Grotesk', 'Biro Script Plus', 'Roboto' sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    &::-webkit-scrollbar {
+    appearance: none;
+    background: transparent;
+    width: 0;
+    /* height: 0; */
+  }
 }
 
 code {
@@ -78,6 +85,7 @@ button {
 a {
     color: inherit;
     text-decoration: none;
+    cursor: pointer;
 }
 
 
@@ -127,7 +135,6 @@ export const Section = styled.section`
     }
 
     @media (min-width: ${root.breakpoints.desktop}) {
-        /* min-width: ${root.breakpoints.desktop}; */
         max-width: ${root.breakpoints.maxDesktop};
     }
 `;

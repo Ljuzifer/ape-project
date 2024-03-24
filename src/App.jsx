@@ -15,10 +15,10 @@ function App() {
         <>
             <main>
                 <Hero />
-                <About />
-                <MindMap />
-                <FaqUnitsList />
-                <Collection />
+                <About anchor='about' />
+                <MindMap anchor='m-map' />
+                <FaqUnitsList anchor='faq' />
+                <Collection anchor='collection' />
                 <AreYouIn anchor='mint' />
             </main>
             <Footer />

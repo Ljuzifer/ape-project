@@ -12,6 +12,8 @@ const about = {
     aboutTab2x: aboutTab_2x,
     aboutDesk1x: aboutDesk_1x,
     aboutDesk2x: aboutDesk_2x,
+
+    alt: "About Ape",
 };
 
 export default about;

@@ -9,14 +9,17 @@ export const BannerThumb = styled.div`
     transform: translateX(-50%);
     bottom: 0;
     width: 100vw;
+    /* width: calc(100vw - 8 * 2); */
     height: 52px;
-    padding: 11px 0;
+    padding: 6px 0;
     background: ${root.colors.mainPinkColor};
     overflow: hidden;
 
     @media (min-width: ${root.breakpoints.desktop}) {
         padding: 16px 0;
         height: 86px;
+        /* width: 100vw; */
+        /* width: calc(100vw - 16 * 2); */
     }
 `;
 
@@ -53,6 +56,7 @@ export const ThumbContent = styled.div`
         b {
             font-size: 64px;
             margin-right: 36px;
+            /* width: calc(100vw - 16 * 2); */
         }
     }
 `;
@@ -62,6 +66,7 @@ export const Icon = styled.div`
     justify-content: center;
     align-items: center;
     margin-right: 24px;
+    margin-top: 8px;
 
     svg {
         width: 36px;
@@ -71,5 +76,6 @@ export const Icon = styled.div`
 
     @media (min-width: ${root.breakpoints.desktop}) {
         margin-right: 36px;
+        margin-top: 10px;
     }
 `;
