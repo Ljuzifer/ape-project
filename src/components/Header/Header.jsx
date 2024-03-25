@@ -57,19 +57,23 @@ function Header() {
 
     return (
         <header>
-            <HeadContainer style={{ position: isTop ? "absolute" : "fixed" }}>
+            <HeadContainer
+                style={{
+                    position: isTop ? "absolute" : "fixed",
+                }}>
                 <a
                     href='https://ljuzifer.github.io/ape-project/'
                     aria-label='Logo of Company'
                     rel='noopener norefferer nofollow'>
                     <LogoDesktop>
                         <Logo
-                            style={
-                                (isMenuOpen
-                                    ? { fill: `${root.colors.textLigth}` }
-                                    : null,
-                                { visibility: isTop ? "visible" : "hidden" })
-                            }
+                            style={{
+                                fill: isMenuOpen && `${root.colors.textLigth}`,
+                                visibility:
+                                    isTop || (!isTop && isMenuOpen)
+                                        ? "visible"
+                                        : "hidden",
+                            }}
                         />
                     </LogoDesktop>
                 </a>
