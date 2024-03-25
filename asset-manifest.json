@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ape-project/static/css/main.d9cf1e94.css",
-    "main.js": "/ape-project/static/js/main.430bf32f.js",
+    "main.js": "/ape-project/static/js/main.ac19c3a9.js",
     "static/js/453.989a24f5.chunk.js": "/ape-project/static/js/453.989a24f5.chunk.js",
     "static/media/img8-2x.png": "/ape-project/static/media/img8-2x.7d68932cd8bd01268ebf.png",
     "static/media/img2-2x.png": "/ape-project/static/media/img2-2x.af5db681c2afb12ef899.png",
@@ -66,21 +66,24 @@
     "static/media/MessinaSansMono-SemiBold.woff": "/ape-project/static/media/MessinaSansMono-SemiBold.c0ee0f01ae315fe0d3c9.woff",
     "static/media/MessinaSansMono-Regular.woff2": "/ape-project/static/media/MessinaSansMono-Regular.19feb1851352756f781c.woff2",
     "static/media/MessinaSansMono-SemiBold.woff2": "/ape-project/static/media/MessinaSansMono-SemiBold.c212b64fe491bf9fb5ad.woff2",
+    "static/media/logo.svg": "/ape-project/static/media/logo.e3870d9c5e3279c243233e11947d161b.svg",
     "static/media/metaMask.svg": "/ape-project/static/media/metaMask.e5a9ac306d924bcfa9639a4f1a47adcb.svg",
     "static/media/slick.svg": "/ape-project/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/ape-project/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/ape-project/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/ape-project/static/media/slick.295183786cd8a1389865.woff",
+    "static/media/opensea.svg": "/ape-project/static/media/opensea.9fe32d8ef7265c06199e0613adc6948a.svg",
     "static/media/discord.svg": "/ape-project/static/media/discord.290192a4c04bf89cc035adeb49916f42.svg",
     "index.html": "/ape-project/index.html",
+    "static/media/twitter.svg": "/ape-project/static/media/twitter.1129677938bfc80d12ad84d24c66eaac.svg",
     "static/media/cross.svg": "/ape-project/static/media/cross.1b442fa97209d2356d9a484f4bdb3190.svg",
     "static/media/arrow.svg": "/ape-project/static/media/arrow.29e76a0e75acf2a6ae2aa76ce99341ad.svg",
     "main.d9cf1e94.css.map": "/ape-project/static/css/main.d9cf1e94.css.map",
-    "main.430bf32f.js.map": "/ape-project/static/js/main.430bf32f.js.map",
+    "main.ac19c3a9.js.map": "/ape-project/static/js/main.ac19c3a9.js.map",
     "453.989a24f5.chunk.js.map": "/ape-project/static/js/453.989a24f5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d9cf1e94.css",
-    "static/js/main.430bf32f.js"
+    "static/js/main.ac19c3a9.js"
   ]
 }
