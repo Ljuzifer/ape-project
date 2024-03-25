@@ -8,6 +8,7 @@ export const root = {
     breakpoints: {
         minMobile: "360px",
         maxMobile: "480px",
+        beforeTablet: "767px",
         tablet: "768px",
         desktop: "1280px",
         maxDesktop: "1440px",

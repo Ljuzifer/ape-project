@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import { Section } from "../../GlobalStyle.styled";
 import faqUnits from "../../exports/faqUnits";
 import FaqUnit from "../FaqUnit/FaqUnit";
 import { FaqContainer } from "./FaqUnitsList.styled";
 
-function FaqUnitsList() {
+function FaqUnitsList({ anchor }) {
     const [activeUnitIndex, setActivUnitIndex] = useState(0);
 
     const handleUnitClick = (index) => {
@@ -12,7 +13,7 @@ function FaqUnitsList() {
     };
 
     return (
-        <Section>
+        <Section id={anchor}>
             <FaqContainer>
                 <h2>faq</h2>
                 <ul>
@@ -34,3 +35,7 @@ function FaqUnitsList() {
 }
 
 export default FaqUnitsList;
+
+FaqUnitsList.propTypes = {
+    anchor: PropTypes.string.isRequired,
+};

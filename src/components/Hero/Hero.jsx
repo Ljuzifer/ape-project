@@ -30,6 +30,7 @@ function Hero() {
                         `}
                             src={hero.desktop1x}
                             alt={hero.alt}
+                            loading='lazy'
                         />
 
                         <InsideDiv>

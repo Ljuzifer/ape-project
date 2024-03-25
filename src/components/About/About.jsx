@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Section } from "../../GlobalStyle.styled";
 import { AboutContainer, FirstDiv, SecondDiv } from "./About.styled";
 import { ReactComponent as Cross } from "../../icons/cross.svg";
@@ -7,11 +8,11 @@ import { useMedia } from "use-media";
 import about from "../../exports/about";
 import { root } from "../../stylesheets/root";
 
-function About() {
+function About({ anchor }) {
     const isTabScreen = useMedia({ minWidth: "768px" });
 
     return (
-        <Section style={{ position: "relative" }}>
+        <Section id={anchor} style={{ position: "relative" }}>
             <AboutContainer>
                 <FirstDiv>
                     <h2>
@@ -47,6 +48,7 @@ function About() {
                         `}
                     src={about.aboutDesk1x}
                     alt={about.alt}
+                    loading='lazy'
                 />
                 <Banner />
             </AboutContainer>
@@ -55,3 +57,7 @@ function About() {
 }
 
 export default About;
+
+About.propTypes = {
+    anchor: PropTypes.string.isRequired,
+};

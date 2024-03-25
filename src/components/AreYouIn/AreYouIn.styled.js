@@ -112,6 +112,10 @@ export const FormThumb = styled(Form)`
         line-height: 1.2;
         text-transform: uppercase;
         text-align: right;
+
+        @media (min-width: ${root.breakpoints.desktop}) {
+            bottom: -15px;
+        }
     }
 
     button {
