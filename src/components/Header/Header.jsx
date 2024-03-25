@@ -212,7 +212,8 @@ function Header() {
                 <ToggleMenu
                     isActive={isToggleMenu}
                     toggleClose={toggleClose}
-                    position={isTop}
+                    isTop={isTop}
+                    isScroll={isScroll}
                 />
             )}
         </header>

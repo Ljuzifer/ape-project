@@ -3,23 +3,23 @@ import PropTypes from "prop-types";
 import { ToggleList, ToggleNav } from "./ToggleMenu.styled";
 import { root } from "../../stylesheets/root";
 
-function ToggleMenu({ isActive, toggleClose, position }) {
+function ToggleMenu({ isActive, toggleClose, isTop, isScroll }) {
     if (isActive) {
         return (
-            <ToggleNav style={{ position: !position && "fixed" }}>
+            <ToggleNav style={{ position: !isScroll && "fixed" }}>
                 <ToggleList
                     style={{
-                        borderRadius: !position && "12px 0 0 12px",
+                        // borderRadius: !isTop && "12px 0 0 12px",
                         background:
-                            !position && `${root.colors.buttonOpacitySecond}`,
-                        backdropFilter: !position && `${root.colors.filter}`,
+                            !isTop && `${root.colors.buttonOpacitySecond}`,
+                        backdropFilter: !isTop && `${root.colors.filter}`,
                     }}>
                     <li>
                         <a
                             href='#about'
                             onClick={toggleClose}
                             style={{
-                                color: !position && `${root.colors.textLigth}`,
+                                color: !isTop && `${root.colors.textLigth}`,
                             }}>
                             about
                         </a>
@@ -29,7 +29,7 @@ function ToggleMenu({ isActive, toggleClose, position }) {
                             href='#m-map'
                             onClick={toggleClose}
                             style={{
-                                color: !position && `${root.colors.textLigth}`,
+                                color: !isTop && `${root.colors.textLigth}`,
                             }}>
                             m-map
                         </a>
@@ -39,7 +39,7 @@ function ToggleMenu({ isActive, toggleClose, position }) {
                             href='#collection'
                             onClick={toggleClose}
                             style={{
-                                color: !position && `${root.colors.textLigth}`,
+                                color: !isTop && `${root.colors.textLigth}`,
                             }}>
                             arts
                         </a>
@@ -49,7 +49,7 @@ function ToggleMenu({ isActive, toggleClose, position }) {
                             href='#faq'
                             onClick={toggleClose}
                             style={{
-                                color: !position && `${root.colors.textLigth}`,
+                                color: !isTop && `${root.colors.textLigth}`,
                             }}>
                             faq
                         </a>
@@ -59,7 +59,7 @@ function ToggleMenu({ isActive, toggleClose, position }) {
                             href='#mint'
                             onClick={toggleClose}
                             style={{
-                                color: !position && `${root.colors.textLigth}`,
+                                color: !isTop && `${root.colors.textLigth}`,
                             }}>
                             mint
                         </a>
@@ -76,5 +76,6 @@ export default ToggleMenu;
 ToggleMenu.propTypes = {
     isActive: PropTypes.bool.isRequired,
     toggleClose: PropTypes.func,
-    position: PropTypes.bool,
+    isTop: PropTypes.bool,
+    isScroll: PropTypes.bool,
 };
