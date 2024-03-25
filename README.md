@@ -23,6 +23,7 @@ ESCAPING AND DYNAMIC JOURNEY ON THEYACHT. EACH ARTWORK IN THE COLLECTION TELLS A
 <div align="center" style="margin-left: auto; margin-right: auto; width: fit-content;">
 <a><img src="./public/icons/html.png" width="50"/></a>
 <a><img src="./public/icons/css.png" width="50"/></a>
+<a><img src="./public/icons/js.png" width="50"/></a>
 <a><img src="./public/icons/react.png" width="50"/></a>
 <a><img src="./public/icons/formik.256x256.png" width="50"/></a>
 <a><img src="./public/icons/yup.webp" width="100"/></a>
