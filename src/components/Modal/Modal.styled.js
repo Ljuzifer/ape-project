@@ -9,6 +9,7 @@ export const MobileList = styled.div`
     align-items: center;
     margin: 0 auto 186px;
     list-style: none;
+    position: ${(props) => props.isOpen && "relative"};
 
     font-family: ${root.fonts.messina};
     font-weight: 600;

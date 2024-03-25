@@ -13,11 +13,19 @@ function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isToggleMenu, setIsToggleMenu] = useState(false);
     const [isTop, setIsTop] = useState(true);
+    const [isScroll, setIsScroll] = useState(true);
     const isMobile = useMedia({ maxWidth: "767px" });
+
+    const [hover, setHover] = useState(false);
+
+    const toggleHover = () => {
+        setHover(!hover);
+    };
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsTop(window.scrollY < 88);
+            setIsScroll(window.scrollY < 8);
+            setIsTop(window.scrollY < 400);
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -59,7 +67,8 @@ function Header() {
         <header>
             <HeadContainer
                 style={{
-                    position: isTop ? "absolute" : "fixed",
+                    position: isScroll || isMenuOpen ? "absolute" : "fixed",
+                    pointerEvents: !isTop && "none",
                 }}>
                 <a
                     href='https://ljuzifer.github.io/ape-project/'
@@ -70,7 +79,7 @@ function Header() {
                             style={{
                                 fill: isMenuOpen && `${root.colors.textLigth}`,
                                 visibility:
-                                    isTop || (!isTop && isMenuOpen)
+                                    isScroll || (!isScroll && isMenuOpen)
                                         ? "visible"
                                         : "hidden",
                             }}
@@ -80,6 +89,8 @@ function Header() {
 
                 <MenuDesktop>
                     <button
+                        onMouseEnter={toggleHover}
+                        onMouseLeave={toggleHover}
                         className={isTop ? "" : "top"}
                         type='button'
                         onClick={
@@ -95,100 +106,98 @@ function Header() {
                                     ? root.colors.buttonOpacitySecond
                                     : null,
                             color:
-                                isMenuOpen || !isTop
+                                (isMenuOpen && hover) || (!isTop && hover)
+                                    ? `${root.colors.textPink}`
+                                    : isMenuOpen || !isTop
                                     ? root.colors.textLigth
                                     : null,
+
                             borderRadius: isToggleMenu ? "0 12px 12px 0" : null,
-                            ":hover": {
-                                color: root.colors.textPink,
-                            },
-                        }}
-                        // style={
-                        //     (isMenuOpen || !isTop
-                        //         ? {
-                        //               backgroundColor: `${root.colors.buttonOpacitySecond}`,
-                        //               color: `${root.colors.textLigth}`,
-                        //           }
-                        //         : null) ||
-                        //     (isToggleMenu
-                        //         ? { borderRadius: "0 12px 12px 0" }
-                        //         : null)
-                        // }
-                    >
+
+                            pointerEvents: !isTop && "all",
+                        }}>
                         {isMenuOpen ? "close" : "menu"}
                     </button>
                     <nav>
-                        <ul>
+                        <ul style={{ pointerEvents: !isTop && "all" }}>
                             <li
-                                style={
-                                    isMenuOpen || !isTop
-                                        ? {
-                                              backgroundColor: `${root.colors.buttonOpacitySecond}`,
-                                          }
-                                        : null
-                                }>
+                                onMouseEnter={toggleHover}
+                                onMouseLeave={toggleHover}
+                                style={{
+                                    backgroundColor:
+                                        isMenuOpen || !isTop
+                                            ? root.colors.buttonOpacitySecond
+                                            : null,
+                                }}>
                                 <a
                                     href='https://discord.com/'
                                     target='blanck'
                                     aria-label='Discord link'
                                     rel='noopener norefferer nofollow'>
                                     <Discord
-                                        style={
-                                            isMenuOpen || !isTop
-                                                ? {
-                                                      fill: `${root.colors.textLigth}`,
-                                                      ":hover": `${root.colors.textPink}`,
-                                                  }
-                                                : null
-                                        }
+                                        style={{
+                                            fill:
+                                                (isMenuOpen && hover) ||
+                                                (!isTop && hover)
+                                                    ? `${root.colors.textPink}`
+                                                    : isMenuOpen || !isTop
+                                                    ? root.colors.textLigth
+                                                    : null,
+                                        }}
                                     />
                                 </a>
                             </li>
                             <li
-                                style={
-                                    isMenuOpen || !isTop
-                                        ? {
-                                              backgroundColor: `${root.colors.buttonOpacitySecond}`,
-                                          }
-                                        : null
-                                }>
+                                onMouseEnter={toggleHover}
+                                onMouseLeave={toggleHover}
+                                style={{
+                                    backgroundColor:
+                                        isMenuOpen || !isTop
+                                            ? root.colors.buttonOpacitySecond
+                                            : null,
+                                }}>
                                 <a
                                     href='https://opensea.io/'
                                     target='blanck'
                                     aria-label='OpenSea link'
                                     rel='noopener norefferer nofollow'>
                                     <OpenSea
-                                        style={
-                                            isMenuOpen || !isTop
-                                                ? {
-                                                      fill: `${root.colors.textLigth}`,
-                                                  }
-                                                : null
-                                        }
+                                        style={{
+                                            fill:
+                                                (isMenuOpen && hover) ||
+                                                (!isTop && hover)
+                                                    ? `${root.colors.textPink}`
+                                                    : isMenuOpen || !isTop
+                                                    ? root.colors.textLigth
+                                                    : null,
+                                        }}
                                     />
                                 </a>
                             </li>
                             <li
-                                style={
-                                    isMenuOpen || !isTop
-                                        ? {
-                                              backgroundColor: `${root.colors.buttonOpacitySecond}`,
-                                          }
-                                        : null
-                                }>
+                                onMouseEnter={toggleHover}
+                                onMouseLeave={toggleHover}
+                                style={{
+                                    backgroundColor:
+                                        isMenuOpen || !isTop
+                                            ? root.colors.buttonOpacitySecond
+                                            : null,
+                                }}>
                                 <a
                                     href='https://twitter.com/'
                                     target='blanck'
                                     aria-label='X link'
                                     rel='noopener norefferer nofollow'>
                                     <Twitter
-                                        style={
-                                            isMenuOpen || !isTop
-                                                ? {
-                                                      fill: `${root.colors.textLigth}`,
-                                                  }
-                                                : null
-                                        }
+                                        style={{
+                                            fill:
+                                                (isMenuOpen && hover) ||
+                                                (!isTop && hover)
+                                                    ? `${root.colors.textPink}`
+                                                    : isMenuOpen || !isTop
+                                                    ? root.colors.textLigth
+                                                    : null,
+                                        }}
                                     />
                                 </a>
                             </li>

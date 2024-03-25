@@ -8,13 +8,13 @@ function ToggleMenu({ isActive, toggleClose, position }) {
         return (
             <ToggleNav style={{ position: !position && "fixed" }}>
                 <ToggleList
-                    style={{ borderRadius: !position && "12px 0 0 12px" }}>
-                    <li
-                        style={{
-                            background:
-                                !position &&
-                                `${root.colors.buttonOpacitySecond}`,
-                        }}>
+                    style={{
+                        borderRadius: !position && "12px 0 0 12px",
+                        background:
+                            !position && `${root.colors.buttonOpacitySecond}`,
+                        backdropFilter: !position && `${root.colors.filter}`,
+                    }}>
+                    <li>
                         <a
                             href='#about'
                             onClick={toggleClose}
@@ -24,12 +24,7 @@ function ToggleMenu({ isActive, toggleClose, position }) {
                             about
                         </a>
                     </li>
-                    <li
-                        style={{
-                            background:
-                                !position &&
-                                `${root.colors.buttonOpacitySecond}`,
-                        }}>
+                    <li>
                         <a
                             href='#m-map'
                             onClick={toggleClose}
@@ -39,12 +34,7 @@ function ToggleMenu({ isActive, toggleClose, position }) {
                             m-map
                         </a>
                     </li>
-                    <li
-                        style={{
-                            background:
-                                !position &&
-                                `${root.colors.buttonOpacitySecond}`,
-                        }}>
+                    <li>
                         <a
                             href='#collection'
                             onClick={toggleClose}
@@ -54,12 +44,7 @@ function ToggleMenu({ isActive, toggleClose, position }) {
                             arts
                         </a>
                     </li>
-                    <li
-                        style={{
-                            background:
-                                !position &&
-                                `${root.colors.buttonOpacitySecond}`,
-                        }}>
+                    <li>
                         <a
                             href='#faq'
                             onClick={toggleClose}
@@ -69,12 +54,7 @@ function ToggleMenu({ isActive, toggleClose, position }) {
                             faq
                         </a>
                     </li>
-                    <li
-                        style={{
-                            background:
-                                !position &&
-                                `${root.colors.buttonOpacitySecond}`,
-                        }}>
+                    <li>
                         <a
                             href='#mint'
                             onClick={toggleClose}

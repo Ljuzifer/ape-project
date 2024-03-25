@@ -100,7 +100,7 @@ export const MenuDesktop = styled.div`
             }
         }
 
-        button.top:hover {
+        &.top:hover {
             color: ${root.colors.textPink};
         }
     }
@@ -110,6 +110,14 @@ export const MenuDesktop = styled.div`
             width: 24px;
             height: 24px;
         }
+
+        /* button {
+            .top & {
+                &:hover {
+                    color: pink;
+                }
+            }
+        } */
     }
 
     @media (min-width: ${root.breakpoints.desktop}) {

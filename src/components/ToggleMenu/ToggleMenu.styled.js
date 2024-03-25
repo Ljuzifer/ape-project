@@ -44,7 +44,7 @@ export const ToggleList = styled.ul`
 
     width: calc(288px - 48px);
     height: 48px;
-    backdrop-filter: ${root.colors.filter};
+    /* backdrop-filter: ${root.colors.filter}; */
     background: ${root.colors.buttonOpacityFirst};
 
     @media (min-width: ${root.breakpoints.desktop}) {
