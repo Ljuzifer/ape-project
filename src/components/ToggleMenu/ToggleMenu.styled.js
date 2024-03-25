@@ -81,6 +81,8 @@ export const ToggleList = styled.ul`
             @media (min-width: ${root.breakpoints.desktop}) {
                 width: 80px;
                 height: 80px;
+                font-weight: 600;
+                font-size: 16px;
             }
         }
     }
