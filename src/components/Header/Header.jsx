@@ -12,7 +12,20 @@ import ToggleMenu from "../ToggleMenu/ToggleMenu";
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isToggleMenu, setIsToggleMenu] = useState(false);
+    const [isTop, setIsTop] = useState(true);
     const isMobile = useMedia({ maxWidth: "767px" });
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsTop(window.scrollY < 88);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     useEffect(() => {
         if (!isMobile) {
@@ -44,7 +57,7 @@ function Header() {
 
     return (
         <header>
-            <HeadContainer>
+            <HeadContainer style={{ position: isTop ? "absolute" : "fixed" }}>
                 <a
                     href='https://ljuzifer.github.io/ape-project/'
                     aria-label='Logo of Company'
@@ -52,9 +65,10 @@ function Header() {
                     <LogoDesktop>
                         <Logo
                             style={
-                                isMenuOpen
+                                (isMenuOpen
                                     ? { fill: `${root.colors.textLigth}` }
-                                    : null
+                                    : null,
+                                { visibility: isTop ? "visible" : "hidden" })
                             }
                         />
                     </LogoDesktop>
@@ -62,6 +76,7 @@ function Header() {
 
                 <MenuDesktop>
                     <button
+                        className={isTop ? "" : "top"}
                         type='button'
                         onClick={
                             isMobile
@@ -70,23 +85,39 @@ function Header() {
                                     : closeModal
                                 : () => handleToggle()
                         }
-                        style={
-                            (isMenuOpen
-                                ? {
-                                      backgroundColor: `${root.colors.buttonOpacitySecond}`,
-                                  }
-                                : null) ||
-                            (isToggleMenu
-                                ? { borderRadius: "0 12px 12px 0" }
-                                : null)
-                        }>
+                        style={{
+                            backgroundColor:
+                                isMenuOpen || !isTop
+                                    ? root.colors.buttonOpacitySecond
+                                    : null,
+                            color:
+                                isMenuOpen || !isTop
+                                    ? root.colors.textLigth
+                                    : null,
+                            borderRadius: isToggleMenu ? "0 12px 12px 0" : null,
+                            ":hover": {
+                                color: root.colors.textPink,
+                            },
+                        }}
+                        // style={
+                        //     (isMenuOpen || !isTop
+                        //         ? {
+                        //               backgroundColor: `${root.colors.buttonOpacitySecond}`,
+                        //               color: `${root.colors.textLigth}`,
+                        //           }
+                        //         : null) ||
+                        //     (isToggleMenu
+                        //         ? { borderRadius: "0 12px 12px 0" }
+                        //         : null)
+                        // }
+                    >
                         {isMenuOpen ? "close" : "menu"}
                     </button>
                     <nav>
                         <ul>
                             <li
                                 style={
-                                    isMenuOpen
+                                    isMenuOpen || !isTop
                                         ? {
                                               backgroundColor: `${root.colors.buttonOpacitySecond}`,
                                           }
@@ -99,9 +130,10 @@ function Header() {
                                     rel='noopener norefferer nofollow'>
                                     <Discord
                                         style={
-                                            isMenuOpen
+                                            isMenuOpen || !isTop
                                                 ? {
                                                       fill: `${root.colors.textLigth}`,
+                                                      ":hover": `${root.colors.textPink}`,
                                                   }
                                                 : null
                                         }
@@ -110,7 +142,7 @@ function Header() {
                             </li>
                             <li
                                 style={
-                                    isMenuOpen
+                                    isMenuOpen || !isTop
                                         ? {
                                               backgroundColor: `${root.colors.buttonOpacitySecond}`,
                                           }
@@ -123,7 +155,7 @@ function Header() {
                                     rel='noopener norefferer nofollow'>
                                     <OpenSea
                                         style={
-                                            isMenuOpen
+                                            isMenuOpen || !isTop
                                                 ? {
                                                       fill: `${root.colors.textLigth}`,
                                                   }
@@ -134,7 +166,7 @@ function Header() {
                             </li>
                             <li
                                 style={
-                                    isMenuOpen
+                                    isMenuOpen || !isTop
                                         ? {
                                               backgroundColor: `${root.colors.buttonOpacitySecond}`,
                                           }
@@ -147,7 +179,7 @@ function Header() {
                                     rel='noopener norefferer nofollow'>
                                     <Twitter
                                         style={
-                                            isMenuOpen
+                                            isMenuOpen || !isTop
                                                 ? {
                                                       fill: `${root.colors.textLigth}`,
                                                   }
@@ -164,7 +196,11 @@ function Header() {
             {isMobile ? (
                 <Modal state={isMenuOpen} onClose={closeModal} />
             ) : (
-                <ToggleMenu isActive={isToggleMenu} toggleClose={toggleClose} />
+                <ToggleMenu
+                    isActive={isToggleMenu}
+                    toggleClose={toggleClose}
+                    position={isTop}
+                />
             )}
         </header>
     );

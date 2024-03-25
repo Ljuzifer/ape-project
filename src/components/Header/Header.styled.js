@@ -99,6 +99,10 @@ export const MenuDesktop = styled.div`
                 fill: ${root.colors.textLigth};
             }
         }
+
+        button.top:hover {
+            color: ${root.colors.textPink};
+        }
     }
 
     @media (min-width: ${root.breakpoints.tablet}) {
@@ -106,10 +110,6 @@ export const MenuDesktop = styled.div`
             width: 24px;
             height: 24px;
         }
-
-        /* button::before {
-            content: "";
-        } */
     }
 
     @media (min-width: ${root.breakpoints.desktop}) {
@@ -130,9 +130,3 @@ export const MenuDesktop = styled.div`
         }
     }
 `;
-
-// export const SocialLink = styled.a`
-//     svg {
-//         fill: ${(props) => props.isActive && `${root.colors.textLigth}`};
-//     }
-// `;
