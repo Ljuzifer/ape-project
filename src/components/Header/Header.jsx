@@ -72,7 +72,6 @@ function Header() {
                             ? "absolute"
                             : "fixed"
                         : "fixed",
-                    // position: isScroll || isMenuOpen ? "absolute" : "fixed",
                     pointerEvents: !isTop && "none",
                 }}>
                 <a

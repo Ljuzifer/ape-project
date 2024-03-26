@@ -4,31 +4,9 @@ import { ToggleList, ToggleNav } from "./ToggleMenu.styled";
 import { root } from "../../stylesheets/root";
 
 function ToggleMenu({ isActive, toggleClose, isTop, isScroll }) {
-    // const toggleRef = useRef(null);
-
-    // const onClickClose = (e) => {
-    //     if (e.target !== e.currentTarget) {
-    //         toggleClose();
-    //     }
-    // };
-
-    // useEffect(() => {
-    //     const toggle = toggleRef.current;
-    //     if (toggle) {
-    //         toggle.addEventListener("click", onClickClose);
-    //     }
-
-    //     return () => {
-    //         if (toggle) {
-    //             toggle.removeEventListener("click", onClickClose);
-    //         }
-    //     };
-    // }, [onClickClose]);
-
-    const toggleRef = useRef(null); // Реф для відстеження DOM-елемента меню
+    const toggleRef = useRef(null);
 
     useEffect(() => {
-        // Функція, яка перевіряє, чи клік був здійснений за межами меню
         const handleClickOutside = (event) => {
             if (
                 toggleRef.current &&
@@ -38,13 +16,11 @@ function ToggleMenu({ isActive, toggleClose, isTop, isScroll }) {
             }
         };
 
-        // Додаємо слухач подій, коли компонент монтується
         document.addEventListener("mousedown", handleClickOutside);
         return () => {
-            // Прибираємо слухач подій, коли компонент демонтується, щоб уникнути витоків пам'яті
             document.removeEventListener("mousedown", handleClickOutside);
         };
-    }, [toggleClose]); // Залежності ефекту
+    }, [toggleClose]);
 
     if (isActive) {
         return (
@@ -52,7 +28,6 @@ function ToggleMenu({ isActive, toggleClose, isTop, isScroll }) {
                 <ToggleList
                     id='toggle'
                     ref={toggleRef}
-                    // onClick={onClickClose}
                     style={{
                         background:
                             !isTop && `${root.colors.buttonOpacitySecond}`,
