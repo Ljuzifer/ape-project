@@ -67,7 +67,12 @@ function Header() {
         <header>
             <HeadContainer
                 style={{
-                    position: isScroll || isMenuOpen ? "absolute" : "fixed",
+                    position: isScroll
+                        ? !isMenuOpen
+                            ? "absolute"
+                            : "fixed"
+                        : "fixed",
+                    // position: isScroll || isMenuOpen ? "absolute" : "fixed",
                     pointerEvents: !isTop && "none",
                 }}>
                 <a

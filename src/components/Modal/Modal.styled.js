@@ -1,13 +1,20 @@
 import styled, { keyframes } from "styled-components";
 import { root } from "../../stylesheets/root";
 
+export const ModalContent = styled.div`
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+`;
+
 export const MobileList = styled.div`
     display: flex;
     flex-direction: column;
     gap: 16px;
     justify-content: center;
     align-items: center;
-    margin: 0 auto 186px;
+    margin: 0 auto;
     list-style: none;
     position: ${(props) => props.isOpen && "relative"};
 

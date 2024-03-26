@@ -3,7 +3,7 @@ import ReactModal from "react-modal";
 import PropTypes from "prop-types";
 import Copy from "../Copy/Copy";
 import { root } from "../../stylesheets/root";
-import { MobileList } from "./Modal.styled";
+import { MobileList, ModalContent } from "./Modal.styled";
 
 ReactModal.setAppElement("#root");
 
@@ -23,7 +23,7 @@ const customStyles = {
     },
 
     content: {
-        padding: "294px 72px 0",
+        padding: "294px 72px 80px",
         width: "100vw",
         height: "100vh",
         margin: "auto",
@@ -43,24 +43,26 @@ export default function Modal({ state, onClose }) {
             contentLabel={"Site navigation"}
             preventScroll={false}
             shouldCloseOnOverlayClick={true}>
-            <MobileList onClick={onClose}>
-                <li>
-                    <a href='#about'>about</a>
-                </li>
-                <li>
-                    <a href='#m-map'>m-map</a>
-                </li>
-                <li>
-                    <a href='#faq'>faq</a>
-                </li>
-                <li>
-                    <a href='#collection'>arts</a>
-                </li>
-                <li>
-                    <a href='#mint'>mint</a>
-                </li>
-            </MobileList>
-            <Copy />
+            <ModalContent>
+                <MobileList onClick={onClose}>
+                    <li>
+                        <a href='#about'>about</a>
+                    </li>
+                    <li>
+                        <a href='#m-map'>m-map</a>
+                    </li>
+                    <li>
+                        <a href='#faq'>faq</a>
+                    </li>
+                    <li>
+                        <a href='#collection'>arts</a>
+                    </li>
+                    <li>
+                        <a href='#mint'>mint</a>
+                    </li>
+                </MobileList>
+                <Copy />
+            </ModalContent>
         </ReactModal>
     );
 }
