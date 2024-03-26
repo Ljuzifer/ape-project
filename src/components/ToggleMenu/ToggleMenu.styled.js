@@ -17,7 +17,7 @@ export const trance = keyframes`
 export const ToggleNav = styled.nav`
     position: absolute;
     width: 736px;
-    padding: 0 12px;
+    padding: 0 13px;
     margin: 0 auto;
     top: calc(54px + 12px);
     left: 50%;
@@ -44,7 +44,6 @@ export const ToggleList = styled.ul`
 
     width: calc(288px - 48px);
     height: 48px;
-    /* backdrop-filter: ${root.colors.filter}; */
     background: ${root.colors.buttonOpacityFirst};
 
     @media (min-width: ${root.breakpoints.desktop}) {

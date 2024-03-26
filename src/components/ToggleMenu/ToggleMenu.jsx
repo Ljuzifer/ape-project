@@ -9,11 +9,11 @@ function ToggleMenu({ isActive, toggleClose, isTop, isScroll }) {
             <ToggleNav style={{ position: !isScroll && "fixed" }}>
                 <ToggleList
                     style={{
-                        // borderRadius: !isTop && "12px 0 0 12px",
                         background:
                             !isTop && `${root.colors.buttonOpacitySecond}`,
                         backdropFilter: !isTop && `${root.colors.filter}`,
-                    }}>
+                    }}
+                    $scroll={!isTop}>
                     <li>
                         <a
                             href='#about'
