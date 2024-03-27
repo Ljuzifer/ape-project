@@ -6,12 +6,12 @@ export const ToggleListItem = styled.a`
     ${({ $scroll }) =>
         $scroll
             ? css`
-                  &:hover {
+                  a:hover {
                       color: pink;
                   }
               `
             : css`
-                  &:hover {
+                  a:hover {
                       color: black;
                   }
               `}
