@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ape-project/static/css/main.d9cf1e94.css",
-    "main.js": "/ape-project/static/js/main.ab39366c.js",
+    "main.js": "/ape-project/static/js/main.fb6fbb29.js",
     "static/js/453.989a24f5.chunk.js": "/ape-project/static/js/453.989a24f5.chunk.js",
     "static/media/img8-2x.png": "/ape-project/static/media/img8-2x.7d68932cd8bd01268ebf.png",
     "static/media/img2-2x.png": "/ape-project/static/media/img2-2x.af5db681c2afb12ef899.png",
@@ -79,11 +79,11 @@
     "static/media/cross.svg": "/ape-project/static/media/cross.1b442fa97209d2356d9a484f4bdb3190.svg",
     "static/media/arrow.svg": "/ape-project/static/media/arrow.29e76a0e75acf2a6ae2aa76ce99341ad.svg",
     "main.d9cf1e94.css.map": "/ape-project/static/css/main.d9cf1e94.css.map",
-    "main.ab39366c.js.map": "/ape-project/static/js/main.ab39366c.js.map",
+    "main.fb6fbb29.js.map": "/ape-project/static/js/main.fb6fbb29.js.map",
     "453.989a24f5.chunk.js.map": "/ape-project/static/js/453.989a24f5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d9cf1e94.css",
-    "static/js/main.ab39366c.js"
+    "static/js/main.fb6fbb29.js"
   ]
 }
