@@ -1,5 +1,21 @@
-import styled, { keyframes } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import { root } from "../../stylesheets/root";
+
+// Чогось не працює...
+export const ToggleListItem = styled.a`
+    ${({ $scroll }) =>
+        $scroll
+            ? css`
+                  &:hover {
+                      color: pink;
+                  }
+              `
+            : css`
+                  &:hover {
+                      color: black;
+                  }
+              `}
+`;
 
 export const trance = keyframes`
 0%{

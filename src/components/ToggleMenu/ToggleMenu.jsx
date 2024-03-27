@@ -1,14 +1,13 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import { ToggleList, ToggleNav } from "./ToggleMenu.styled";
+import { ToggleList, ToggleListItem, ToggleNav } from "./ToggleMenu.styled";
 import { root } from "../../stylesheets/root";
 
-function ToggleMenu({ isActive, toggleClose, isTop, isScroll }) {
-    const toggleRef = useRef(null);
-
+function ToggleMenu({ isActive, toggleRef, toggleClose, isTop, isScroll }) {
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (
+                event.target.id !== "toggle" &&
                 toggleRef.current &&
                 !toggleRef.current.contains(event.target)
             ) {
@@ -16,11 +15,16 @@ function ToggleMenu({ isActive, toggleClose, isTop, isScroll }) {
             }
         };
 
-        document.addEventListener("mousedown", handleClickOutside);
+        if (isActive) {
+            document.addEventListener("mousedown", handleClickOutside);
+        } else {
+            document.removeEventListener("mousedown", handleClickOutside);
+        }
+
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
         };
-    }, [toggleClose]);
+    }, [isActive, toggleClose]);
 
     if (isActive) {
         return (
@@ -35,14 +39,15 @@ function ToggleMenu({ isActive, toggleClose, isTop, isScroll }) {
                     }}
                     $scroll={!isTop}>
                     <li>
-                        <a
+                        <ToggleListItem
+                            $scroll={isTop}
                             href='#about'
                             onClick={toggleClose}
                             style={{
                                 color: !isTop && `${root.colors.textLigth}`,
                             }}>
                             about
-                        </a>
+                        </ToggleListItem>
                     </li>
                     <li>
                         <a
@@ -98,4 +103,5 @@ ToggleMenu.propTypes = {
     toggleClose: PropTypes.func,
     isTop: PropTypes.bool,
     isScroll: PropTypes.bool,
+    toggleRef: PropTypes.object.isRequired,
 };

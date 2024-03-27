@@ -84,6 +84,7 @@ export const MenuDesktop = styled.div`
         background: ${root.colors.buttonOpacityFirst};
         cursor: pointer;
         z-index: 667;
+        /* pointer-events: none; */
 
         svg {
             width: 16px;

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Modal from "../Modal/Modal";
 import { ReactComponent as Logo } from "../../icons/logo.svg";
 import { ReactComponent as Discord } from "../../icons/discord.svg";
@@ -14,6 +14,7 @@ function Header() {
     const [isToggleMenu, setIsToggleMenu] = useState(false);
     const [isTop, setIsTop] = useState(true);
     const [isScroll, setIsScroll] = useState(true);
+    const toggleRef = useRef(null);
     const isMobile = useMedia({ maxWidth: "767px" });
 
     const [hover, setHover] = useState(false);
@@ -93,6 +94,7 @@ function Header() {
 
                 <MenuDesktop>
                     <button
+                        id='toggle'
                         onMouseEnter={toggleHover}
                         onMouseLeave={toggleHover}
                         className={isTop ? "" : "top"}
@@ -102,7 +104,7 @@ function Header() {
                                 ? !isMenuOpen
                                     ? openModal
                                     : closeModal
-                                : () => handleToggle()
+                                : handleToggle
                         }
                         style={{
                             backgroundColor:
@@ -218,6 +220,7 @@ function Header() {
                     toggleClose={toggleClose}
                     isTop={isTop}
                     isScroll={isScroll}
+                    toggleRef={toggleRef}
                 />
             )}
         </header>
