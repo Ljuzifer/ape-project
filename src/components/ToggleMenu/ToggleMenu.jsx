@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import { ToggleList, ToggleListItem, ToggleNav } from "./ToggleMenu.styled";
-import { root } from "../../stylesheets/root";
+import { ToggleList, ToggleNav } from "./ToggleMenu.styled";
 
 function ToggleMenu({ isActive, toggleRef, toggleClose, isTop, isScroll }) {
     useEffect(() => {
@@ -15,77 +14,52 @@ function ToggleMenu({ isActive, toggleRef, toggleClose, isTop, isScroll }) {
             }
         };
 
+        const handleKeyDown = (event) => {
+            if (event.key === "Escape") {
+                toggleClose();
+            }
+        };
+
         if (isActive) {
             document.addEventListener("mousedown", handleClickOutside);
+            document.addEventListener("keydown", handleKeyDown);
         } else {
             document.removeEventListener("mousedown", handleClickOutside);
+            document.removeEventListener("keydown", handleKeyDown);
         }
 
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
+            document.removeEventListener("keydown", handleKeyDown);
         };
     }, [isActive, toggleClose]);
 
     if (isActive) {
         return (
-            <ToggleNav style={{ position: !isScroll && "fixed" }}>
-                <ToggleList
-                    id='toggle'
-                    ref={toggleRef}
-                    style={{
-                        background:
-                            !isTop && `${root.colors.buttonOpacitySecond}`,
-                        backdropFilter: !isTop && `${root.colors.filter}`,
-                    }}
-                    $scroll={!isTop}>
+            <ToggleNav $scroll={!isScroll}>
+                <ToggleList id='toggle' $top={isTop} ref={toggleRef}>
                     <li>
-                        <ToggleListItem
-                            $scroll={isTop}
-                            href='#about'
-                            onClick={toggleClose}
-                            style={{
-                                color: !isTop && `${root.colors.textLigth}`,
-                            }}>
+                        <a href='#about' onClick={toggleClose}>
                             about
-                        </ToggleListItem>
+                        </a>
                     </li>
                     <li>
-                        <a
-                            href='#m-map'
-                            onClick={toggleClose}
-                            style={{
-                                color: !isTop && `${root.colors.textLigth}`,
-                            }}>
+                        <a href='#m-map' onClick={toggleClose}>
                             m-map
                         </a>
                     </li>
                     <li>
-                        <a
-                            href='#collection'
-                            onClick={toggleClose}
-                            style={{
-                                color: !isTop && `${root.colors.textLigth}`,
-                            }}>
+                        <a href='#collection' onClick={toggleClose}>
                             arts
                         </a>
                     </li>
                     <li>
-                        <a
-                            href='#faq'
-                            onClick={toggleClose}
-                            style={{
-                                color: !isTop && `${root.colors.textLigth}`,
-                            }}>
+                        <a href='#faq' onClick={toggleClose}>
                             faq
                         </a>
                     </li>
                     <li>
-                        <a
-                            href='#mint'
-                            onClick={toggleClose}
-                            style={{
-                                color: !isTop && `${root.colors.textLigth}`,
-                            }}>
+                        <a href='#mint' onClick={toggleClose}>
                             mint
                         </a>
                     </li>

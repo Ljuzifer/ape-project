@@ -1,21 +1,5 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { root } from "../../stylesheets/root";
-
-// Чогось не працює...
-export const ToggleListItem = styled.a`
-    ${({ $scroll }) =>
-        $scroll
-            ? css`
-                  a:hover {
-                      color: pink;
-                  }
-              `
-            : css`
-                  a:hover {
-                      color: black;
-                  }
-              `}
-`;
 
 export const trance = keyframes`
 0%{
@@ -31,9 +15,9 @@ export const trance = keyframes`
 `;
 
 export const ToggleNav = styled.nav`
-    position: absolute;
+    position: ${(props) => (props.$scroll ? "fixed" : "absolute")};
     width: 736px;
-    padding: 0 13px;
+    padding: 0 12px;
     margin: 0 auto;
     top: calc(54px + 12px);
     left: 50%;
@@ -42,6 +26,7 @@ export const ToggleNav = styled.nav`
     pointer-events: none;
 
     @media (min-width: ${root.breakpoints.desktop}) {
+        padding: 0 13px;
         width: 1408px;
         width: calc(1408px - 96px * 2 + 12px);
         top: calc(24px + 16px);
@@ -61,6 +46,11 @@ export const ToggleList = styled.ul`
     width: calc(288px - 48px);
     height: 48px;
     background: ${root.colors.buttonOpacityFirst};
+    background-color: ${(props) =>
+        props.$top
+            ? root.colors.buttonOpacityFirst
+            : root.colors.buttonOpacitySecond};
+    backdrop-filter: ${(props) => !props.$top && root.colors.filter};
 
     @media (min-width: ${root.breakpoints.desktop}) {
         width: calc(480px - 80px);
@@ -81,7 +71,10 @@ export const ToggleList = styled.ul`
             font-weight: 600;
             font-size: 12px;
             line-height: 1.17;
-            color: ${root.colors.secondDarkColor};
+            color: ${(props) =>
+                props.$top
+                    ? root.colors.secondDarkColor
+                    : root.colors.textLigth};
             min-width: 48px;
             height: 48px;
             padding: 10px;
@@ -89,7 +82,8 @@ export const ToggleList = styled.ul`
             cursor: pointer;
 
             &:hover {
-                color: ${root.colors.textLigth};
+                color: ${(props) =>
+                    props.$top ? root.colors.textLigth : root.colors.textPink};
                 text-decoration: underline;
             }
 

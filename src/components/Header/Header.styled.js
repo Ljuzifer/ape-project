@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { root } from "../../stylesheets/root";
 
 export const HeadContainer = styled.div`
-    position: absolute;
+    position: ${(props) =>
+        !props.$scroll ? (!props.$burger ? "absolute" : "fixed") : "fixed"};
     top: calc(54px + 8px);
     left: 50%;
     transform: translateX(-50%);
@@ -12,6 +13,11 @@ export const HeadContainer = styled.div`
     margin: 0 auto;
     width: 344px;
     z-index: 666;
+    pointer-events: ${(props) => !props.$top && "none"};
+
+    > a {
+        height: fit-content;
+    }
 
     @media (min-width: ${root.breakpoints.tablet}) {
         width: 736px;
@@ -36,7 +42,14 @@ export const LogoDesktop = styled.div`
     cursor: pointer;
 
     svg {
-        fill: ${root.colors.secondDarkColor};
+        fill: ${(props) =>
+            props.$burger
+                ? root.colors.textLigth
+                : root.colors.secondDarkColor};
+        visibility: ${(props) =>
+            !props.$scroll || (props.$scroll && props.$burger)
+                ? "visible"
+                : "hidden"};
 
         &:hover {
             fill: ${root.colors.textLigth};
@@ -47,6 +60,11 @@ export const LogoDesktop = styled.div`
         width: 72px;
         height: 50px;
         margin-top: calc(39px - 24px);
+
+        svg {
+            width: 72px;
+            height: 50px;
+        }
     }
 `;
 
@@ -61,6 +79,7 @@ export const MenuDesktop = styled.div`
         display: flex;
         flex-direction: column;
         gap: 8px;
+        pointer-events: ${(props) => !props.$top && "all"};
     }
 
     button,
@@ -69,47 +88,69 @@ export const MenuDesktop = styled.div`
         font-weight: 600;
         font-size: 12px;
         line-height: 1.17;
-        color: ${root.colors.secondDarkColor};
+        color: ${(props) =>
+            props.$top ? root.colors.secondDarkColor : root.colors.textLigth};
         text-transform: uppercase;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
         border: none;
         border-radius: 8px;
-        padding: 10px;
         width: 48px;
         height: 48px;
         backdrop-filter: ${root.colors.filter};
-        background: ${root.colors.buttonOpacityFirst};
+        background-color: ${(props) =>
+            props.$burger || !props.$top
+                ? root.colors.buttonOpacitySecond
+                : root.colors.buttonOpacityFirst};
         cursor: pointer;
-        z-index: 667;
-        /* pointer-events: none; */
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            width: 100%;
+            height: 100%;
+        }
 
         svg {
             width: 16px;
             height: 16px;
-            fill: ${root.colors.secondDarkColor};
+            fill: ${(props) =>
+                props.$burger || !props.$top
+                    ? root.colors.textLigth
+                    : root.colors.secondDarkColor};
         }
 
         &:hover {
-            color: ${root.colors.textLigth};
             text-decoration: underline;
+            color: ${(props) =>
+                props.$top ? root.colors.textLigth : root.colors.textPink};
 
             svg {
-                fill: ${root.colors.textLigth};
+                fill: ${(props) =>
+                    props.$burger || !props.$top
+                        ? root.colors.textPink
+                        : root.colors.textLigth};
             }
         }
+    }
 
-        &.top:hover {
-            color: ${root.colors.textPink};
-        }
+    button {
+        border-radius: ${(props) =>
+            props.$toggle_open ? "0 8px 8px 0" : "8px"};
+        pointer-events: ${(props) => !props.$top && "all"};
     }
 
     @media (min-width: ${root.breakpoints.tablet}) {
         svg {
             width: 24px;
             height: 24px;
+        }
+
+        button {
+            border-radius: ${(props) =>
+                props.$toggle_open ? "0 8px 8px 0" : "8px"};
+            pointer-events: ${(props) => !props.$top && "all"};
         }
     }
 
@@ -128,6 +169,13 @@ export const MenuDesktop = styled.div`
             height: 80px;
             font-size: 16px;
             line-height: 1.19;
+            border-radius: 12px;
+        }
+
+        button {
+            border-radius: ${(props) =>
+                props.$toggle_open ? "0 12px 12px 0" : "12px"};
+            pointer-events: ${(props) => !props.$top && "all"};
         }
     }
 `;
