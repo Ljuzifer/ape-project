@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ape-project/static/css/main.d9cf1e94.css",
-    "main.js": "/ape-project/static/js/main.27c881a8.js",
+    "main.css": "/ape-project/static/css/main.3b11f76e.css",
+    "main.js": "/ape-project/static/js/main.37cf0732.js",
     "static/js/453.989a24f5.chunk.js": "/ape-project/static/js/453.989a24f5.chunk.js",
     "static/media/img8-2x.png": "/ape-project/static/media/img8-2x.7d68932cd8bd01268ebf.png",
     "static/media/img2-2x.png": "/ape-project/static/media/img2-2x.af5db681c2afb12ef899.png",
@@ -78,12 +78,12 @@
     "static/media/twitter.svg": "/ape-project/static/media/twitter.1129677938bfc80d12ad84d24c66eaac.svg",
     "static/media/cross.svg": "/ape-project/static/media/cross.1b442fa97209d2356d9a484f4bdb3190.svg",
     "static/media/arrow.svg": "/ape-project/static/media/arrow.29e76a0e75acf2a6ae2aa76ce99341ad.svg",
-    "main.d9cf1e94.css.map": "/ape-project/static/css/main.d9cf1e94.css.map",
-    "main.27c881a8.js.map": "/ape-project/static/js/main.27c881a8.js.map",
+    "main.3b11f76e.css.map": "/ape-project/static/css/main.3b11f76e.css.map",
+    "main.37cf0732.js.map": "/ape-project/static/js/main.37cf0732.js.map",
     "453.989a24f5.chunk.js.map": "/ape-project/static/js/453.989a24f5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d9cf1e94.css",
-    "static/js/main.27c881a8.js"
+    "static/css/main.3b11f76e.css",
+    "static/js/main.37cf0732.js"
   ]
 }
