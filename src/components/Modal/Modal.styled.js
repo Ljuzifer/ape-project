@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { root } from "../../stylesheets/root";
 
 export const ModalContent = styled.div`
@@ -30,18 +30,4 @@ export const MobileList = styled.div`
             color: ${root.colors.textPink};
         }
     }
-`;
-
-export const Animation = keyframes`
-from{
-    transform: scale(0);
-    transform-origin: bottom;
-    /* transition: transform ${root.transition}; */
-}
-to{
-    transform: scaleY(1);
-    transform-origin: top;
-
-    /* transition: transform ${root.transition} */
-}
 `;

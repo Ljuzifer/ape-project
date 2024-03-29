@@ -1,0 +1,17 @@
+@import "normalize.css";
+
+.ReactModal__Overlay {
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 800ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+    transform: scaleY(1);
+}
+
+.ReactModal__Overlay--before-close {
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 800ms ease-in-out;
+}

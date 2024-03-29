@@ -5,11 +5,13 @@ import { FootContainer } from "./Footer.styled";
 
 function Footer() {
     return (
-        <Section>
-            <FootContainer>
-                <Copy />
-            </FootContainer>
-        </Section>
+        <footer>
+            <Section>
+                <FootContainer>
+                    <Copy />
+                </FootContainer>
+            </Section>
+        </footer>
     );
 }
 
