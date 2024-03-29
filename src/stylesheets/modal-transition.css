@@ -3,7 +3,7 @@
 .ReactModal__Overlay {
     transform: scaleY(0);
     transform-origin: top;
-    transition: transform 800ms ease-in-out;
+    transition: transform 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ReactModal__Overlay--after-open {
@@ -13,5 +13,5 @@
 .ReactModal__Overlay--before-close {
     transform: scaleY(0);
     transform-origin: bottom;
-    transition: transform 800ms ease-in-out;
+    transition: transform 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }

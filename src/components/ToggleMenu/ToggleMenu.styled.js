@@ -1,18 +1,5 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { root } from "../../stylesheets/root";
-
-export const trance = keyframes`
-0%{
-    opacity: 0;
-    transform: scaleX(0);
-    /* transform-origin: left; */
-}
-100%{
-    opacity: 1;
-    transform: scaleX(1);
-    /* transform-origin: right; */
-}
-`;
 
 export const ToggleNav = styled.nav`
     position: ${(props) => (props.$scroll ? "fixed" : "absolute")};
